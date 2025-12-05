@@ -1,5 +1,6 @@
 import 'package:bc_app/views/create_account.dart';
-import 'package:bc_app/views/forgot-password.dart';
+import 'package:bc_app/views/forgot_password.dart';
+import 'package:bc_app/views/home_screen.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatefulWidget {
@@ -72,7 +73,13 @@ class _LoginState extends State<Login> {
                 ),
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const HomePage()
+                    ),
+                  );
+                },
                 child: const Text(
                   'Login',
                   style: TextStyle(color: Colors.blue),
